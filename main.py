@@ -16,8 +16,8 @@ def main():
     string, bul_result = ternar_expression()
     number = len(string)
     for item in range(1, number + 1):
-        test_dict[item] = string[item - 1]
-    test_dict[int(number / 2)] = {123: "test", "train": {123456: ["fhfhfh", "ruieiw"]}}
+        test_dict[str(item)] = string[item - 1]
+    test_dict[str(int(number / 2))] = {"123": "test", "train": {"123456": ["fhfhfh", "ruieiw"]}}
     print(test_dict)
     jmespath_value = jmp.search("train", test_dict)
     print(f"The result of the jmespath work: {jmespath_value}.")
